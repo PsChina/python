@@ -51,3 +51,23 @@ t = float(input('请输入华氏度:'))
 c = (t - 32)/1.8
 
 print('%.2f华氏度等于%.2f摄氏度' % (t, c))
+
+import math
+
+print('练习2：输入圆的半径计算计算周长和面积。')
+
+r = float(input('半径:'))
+
+perimeter = 2 * r * math.pi
+
+area = math.pi * (r ** 2)
+
+print('半径%f的圆周长为%.4f,面积为%.4f'%(r,perimeter,area))
+
+print('练习3：输入年份判断是不是闰年。')
+
+year = int(input('请输入年份:'))
+
+is_leap = year % 4 is 0 or year % 400 is 0
+
+print(is_leap)
