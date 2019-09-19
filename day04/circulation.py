@@ -43,3 +43,47 @@ print("%d 和 %d 的最大公约数为 %d " % (a, b, num_b))
 
 print("%d 和 %d 的最小公倍数为 %d " % (a, b, a*b/num_b))
 
+
+print('练习3：打印三角形图案。')
+
+"""
+打印各种三角形图案
+
+*
+**
+***
+****
+*****
+
+    *
+   **
+  ***
+ ****
+*****
+
+    *
+   ***
+  *****
+ *******
+*********
+
+"""
+
+for i in range(5):
+  for _ in range(i+1):
+    print('*', end='') # python3
+  print()
+
+for i in range(5):
+  for _ in range(5-i-1):
+    print(' ', end='') # python3
+  for _ in range(i+1):
+    print('*', end='')
+  print()
+
+for i in range(5):
+  for _ in range(5-i-1):
+    print(' ', end='') # python3
+  for _ in range(2*i+1):
+    print('*', end='')
+  print()
