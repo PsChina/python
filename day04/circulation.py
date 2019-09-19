@@ -1,0 +1,42 @@
+#coding=utf-8
+from math import sqrt
+print('练习1：输入一个数判断是不是素数。')
+
+num = int(input('请输入一个正整数num='))
+
+end = int(sqrt(num))
+
+is_prime_num = True
+
+for x in range(2,end+1):
+  if num % x is 0:
+    is_prime_num = False
+    break
+if is_prime_num and num is not 1:
+  print('%d 是素数' % num)
+else:
+  print('%d 不是素数' % num)
+
+print('练习2：输入两个正整数，计算最大公约数和最小公倍数。')
+
+num_a = int(input('A='))
+
+num_b = int(input('B='))
+
+a = num_a
+b = num_b
+# 辗转相除法
+
+if num_a < num_b:
+  temp = num_a
+  num_a = num_b
+  num_b = temp
+
+print(num_a % num_b,(num_a % num_b) is not 0)
+
+while (num_a % num_b) is not 0:
+  num_a = num_b
+  num_b = num_a % num_b
+
+print("%d 和 %d 的最大公约数为 %d " % a, b, num_b)
+
