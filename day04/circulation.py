@@ -32,11 +32,14 @@ if num_a < num_b:
   num_a = num_b
   num_b = temp
 
-print(num_a % num_b,(num_a % num_b) is not 0)
+mod = num_a % num_b
 
-while (num_a % num_b) is not 0:
+while mod is not 0:
   num_a = num_b
-  num_b = num_a % num_b
+  num_b = mod
+  mod = num_a % num_b
 
-print("%d 和 %d 的最大公约数为 %d " % a, b, num_b)
+print("%d 和 %d 的最大公约数为 %d " % (a, b, num_b))
+
+print("%d 和 %d 的最小公倍数为 %d " % (a, b, a*b/num_b))
 
