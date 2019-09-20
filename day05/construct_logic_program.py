@@ -8,16 +8,16 @@ for n in range(100,1000):
   if (a**3 + b**3 + c**3) == n:
     print(n)
 
-# print('寻找完美数2-9999')
+print('寻找完美数2-9999')
 
-# for n in range(2,10000):
-#   sum = 1
-#   is_prime_num = True
-#   for x in range(2,n):
-#     if n%x is 0:
-#       sum += x
-#   if sum == n:
-#     print(n)
+for n in range(2,10000):
+  sum = 1
+  is_prime_num = True
+  for x in range(2,n):
+    if n%x is 0:
+      sum += x
+  if sum == n:
+    print(n)
 
 print('百钱百鸡')
 
