@@ -28,5 +28,16 @@ test = Test('Hello')
 
 # print(test.__foo)
 
+def main():
+  test = Test('Hello')
+  test._Test__bar()
+  print(test._Test__foo)
+
+# print(__name__)
+
+if __name__ == '__main__':
+  main()
+
+
 
 
