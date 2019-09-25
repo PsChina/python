@@ -26,3 +26,9 @@ class Student(object):
         else:
             print('%s正在观看岛国爱情大电影.' % self.name)
 ```
+
+# 访问可见性问题
+
+以 `__` 开头的属性和方法是不可见的
+
+须以 `._ClassName__attr` 或者 `._ClassName__func()` 来访问
