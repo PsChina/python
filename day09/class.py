@@ -66,7 +66,7 @@ print(Triangle.getAreaFromTriangle(1,1,1))
 
 # day12 
 
-# 继承和多态
+# 继承
 
 class Person(object):
   def __init__(self,name,age):
