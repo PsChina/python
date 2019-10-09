@@ -5,6 +5,13 @@ def main():
     print(f.read())
     f.close()
 
+def print_text_line_by_line():
+    f = open('README.md', 'r', encoding='utf-8')
+    line_index = 1
+    for each_line in f:
+        print("%d:%s" % (line_index, each_line))
+        line_index += 1
 
 if __name__ == '__main__':
-    main()
+    # main()
+    print_text_line_by_line()
