@@ -131,4 +131,12 @@ print(scores.pop('潘杉杉', 100))
 scores.clear()
 print(scores)
 
+# 拷贝列表
 
+arr = [1,2,3]
+
+arr_copy = arr[:]
+
+arr.pop()
+
+print(arr, arr_copy)
