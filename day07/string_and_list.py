@@ -140,3 +140,14 @@ arr_copy = arr[:]
 arr.pop()
 
 print(arr, arr_copy)
+
+
+# 根据索引删除元素
+
+del arr[0]
+
+# 根据元素删除元素
+
+arr.remove(2)
+
+print(arr)
