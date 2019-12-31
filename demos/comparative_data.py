@@ -1,4 +1,5 @@
 
+#coding=utf-8
 
 classA = {
   'name':'classA',
@@ -66,12 +67,14 @@ print(comparative_data(classA,classB,['name','teachers']))
 
 print(comparative_data(classA,classB,['name','students']))
 
-print(comparative_data(classA,classB,[]))
+print(comparative_data(classA,classB))
 
-print(comparative_data([1,2,3,{'a':'a'}],[1,2,3,{'a':'a'}],[]))
+print(comparative_data([1,2,3,{'a':'a'}],[1,2,3,{'a':'a'}]))
 
-print(comparative_data([1,2,3,{'a':'a'}],[1,2,3,{'a':'a','b':'b'}],[]))
+print(comparative_data([1,2,3,{'a':'a'}],[1,2,3,{'a':'a','b':'b'}]))
 
-print(comparative_data([1,2,3,{'a':'a','b':'b'}],[1,2,3,{'a':'a'}],[]))
+print(comparative_data([1,2,3,{'a':'a','b':'b'}],[1,2,3,{'a':'a'}]))
 
 print(comparative_data([1,2,3,{'a':'a','b':'b'}],[1,2,3,{'a':'a','b':'b'}]))
+
+print(comparative_data([1,2,3,{'a':'a','b':'b'}],[1,2,3,{'a':'a'}],['a']))
