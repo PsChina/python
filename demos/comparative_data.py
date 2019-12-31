@@ -49,13 +49,19 @@ def comparative_data(objectA,objectB,keys=[]):
         typeB = type(objectB[key])
         if typeA.__name__ == typeB.__name__:
           if typeA == 'list' or typeA == 'dict':
-            isNoDifference = comparative_data(objectA[key],objectB[key],keys)
+            _isNoDifference = comparative_data(objectA[key],objectB[key],keys)
+            if _isNoDifference is False:
+              isNoDifference = _isNoDifference
           elif objectA[key] != objectB[key]:
             isNoDifference = False
       elif key in objectA and objectB.has_key(key) is False or objectA.has_key(key) is False and key in objectB:
         isNoDifference = False
   elif typeA.__name__ == 'list':
-    length = len(objectA)
+    lengthA = len(objectA)
+    lengthB = len(objectB)
+    if lengthA != lengthB:
+      return False
+    length = lengthA
     for index in range(0, length):
       if comparative_data(objectA[index],objectB[index],keys) is False:
         isNoDifference = False
@@ -78,3 +84,5 @@ print(comparative_data([1,2,3,{'a':'a','b':'b'}],[1,2,3,{'a':'a'}]))
 print(comparative_data([1,2,3,{'a':'a','b':'b'}],[1,2,3,{'a':'a','b':'b'}]))
 
 print(comparative_data([1,2,3,{'a':'a','b':'b'}],[1,2,3,{'a':'a'}],['a']))
+
+print(comparative_data([1,2,3],[1]))
