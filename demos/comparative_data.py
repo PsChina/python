@@ -48,7 +48,7 @@ def comparative_data(objectA,objectB,keys=[]):
         typeA = type(objectA[key])
         typeB = type(objectB[key])
         if typeA.__name__ == typeB.__name__:
-          if typeA == 'list' or typeA == 'dict':
+          if typeA.__name__ == 'list' or typeA.__name__ == 'dict':
             _isNoDifference = comparative_data(objectA[key],objectB[key],keys)
             if _isNoDifference is False:
               isNoDifference = _isNoDifference
