@@ -15,7 +15,6 @@ class Solver:
             self.solved_cnt += 1
             for i in range(Solver.scale):
                 print(' ' * self.resolution[i] + '*')
-                # print(tuple((i, self.resolution[i])), end=' ')
             print()
             
             return
