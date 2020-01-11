@@ -20,7 +20,6 @@ class Solver:
             
             return
 
-
         for j in range(Solver.scale):
             if self.linex[j] or self.diay[i+j] or self.diax[j-i+Solver.scale]:
                 continue
@@ -33,7 +32,7 @@ class Solver:
             self.diay[i+j]= True
             self.diax[j-i+Solver.scale] = True
             
-            # 求解剩下行
+            # 求解剩下行 递归求出全部结果
             self.solve(i+1)
             
             # 从下一行状态回到这一行
